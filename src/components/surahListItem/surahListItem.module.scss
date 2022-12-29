@@ -1,0 +1,92 @@
+.link {
+   display: block;
+   width: 100%;
+}
+.wrapper {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   padding: 10px;
+   border: 2px solid #a19cc5;
+   border-radius: 8px;
+   gap: 15px;
+
+   @media only screen and (max-width: 400px) {
+      flex-direction: column;
+      gap: 0;
+   }
+
+   &:hover {
+      cursor: pointer;
+      color: #a44aff;
+      border-color: #a44aff;
+      .subInfo {
+         color: #a44aff;
+      }
+
+      .subInfoBox {
+         color: #a44aff;
+      }
+   }
+}
+
+.itemNumber {
+   position: relative;
+   min-height: 50px;
+   aspect-ratio: 1 / 1;
+
+   img {
+      display: block;
+      height: 100%;
+      width: 100%;
+   }
+
+   span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      font-size: 16px;
+      color: #fff;
+   }
+}
+
+.itemBody {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.subInfoBox {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   color: #a19cc5;
+}
+
+.itemTitle {
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 35px;
+   color: inherit;
+}
+
+.subInfo {
+   font-weight: 500;
+   font-size: 10px;
+   line-height: 18px;
+   text-transform: uppercase;
+   color: #a19cc5;
+}
+
+.arabicTitle {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 35px;
+   color: #a44aff;
+}
+
+.right {
+   text-align: right;
+}

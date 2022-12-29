@@ -1,0 +1,61 @@
+.banner {
+   position: relative;
+   border-radius: 20px;
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background: linear-gradient(135deg, #df98fa 0%, #9055ff 100%);
+   overflow: hidden;
+
+   &::after {
+      position: absolute;
+      display: block;
+      max-height: 100%;
+      right: 0;
+      bottom: -10px;
+      content: url(../../../public/images/banner-bg.png);
+   }
+}
+
+.bannerTitle {
+   font-weight: 500;
+   font-size: 26px;
+   line-height: 39px;
+   text-align: center;
+   color: #ffffff;
+}
+
+.bannerSubtitle {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: center;
+   color: #ffffff;
+   margin: 0.5rem 0;
+   padding-bottom: 1rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.bannerText {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 21px;
+   text-transform: uppercase;
+   color: #ffffff;
+   margin-top: 0.5rem;
+}
+
+.arabicTitle {
+   font-size: 50px;
+   margin-top: 1rem;
+}
+
+.ayahsContainer {
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+   margin: 2rem 0;
+}

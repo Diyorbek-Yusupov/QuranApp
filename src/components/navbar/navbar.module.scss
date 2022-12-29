@@ -1,0 +1,35 @@
+.navbar {
+   position: sticky;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: rgba(255, 255, 255, 0.189);
+   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+   backdrop-filter: blur(13px);
+   -webkit-backdrop-filter: blur(13px);
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   z-index: 99999;
+}
+
+.sublink {
+   color: #c7c7c7;
+   font-size: 14px;
+}
+
+.title {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 30px;
+   color: #ffffff;
+
+   @media only screen and (max-width: 330px) {
+      font-size: 600;
+      font-size: 16px;
+   }
+}
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}

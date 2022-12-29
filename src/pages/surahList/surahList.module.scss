@@ -1,0 +1,54 @@
+.mainWrapper {
+   min-height: 100vh;
+}
+
+.formGroup {
+   position: relative;
+   width: 100%;
+   max-width: 950px;
+   margin: 4rem auto;
+   display: flex;
+   align-items: center;
+   border: none;
+   border-radius: 20px;
+}
+
+.searchIcon {
+   width: 20px;
+   position: absolute;
+   top: 50%;
+   left: 1rem;
+   transform: translateY(-50%);
+   pointer-events: none;
+}
+
+.searchInput {
+   display: block;
+   width: 100%;
+   padding: 20px 2rem;
+   outline: none;
+   border: none;
+   border-radius: 50px;
+   font-size: 18px;
+   padding-left: 55px;
+
+   @media only screen and (max-width: 540px) {
+      font-size: 16px;
+      padding: 10px 0.5rem;
+      padding-left: 40px;
+   }
+}
+
+.listWrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+
+   @media only screen and (max-width: 1160px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media only screen and (max-width: 790px) {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}

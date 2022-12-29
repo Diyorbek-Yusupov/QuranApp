@@ -1,0 +1,68 @@
+.heading {
+   background: #121931;
+   border-radius: 10px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 13px;
+}
+
+.number {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   width: 30px;
+   background: #a44aff;
+   border-radius: 50%;
+}
+
+.playBtn {
+   position: relative;
+   background-color: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   width: 30px;
+   border: none;
+   cursor: pointer;
+   img {
+      transform: scale(0.7);
+   }
+}
+
+.arabicText {
+   font-weight: 500;
+   font-size: 38px;
+   line-height: 50px;
+   text-align: right;
+   color: #ffffff;
+
+   @media only screen and (max-width: 505px) {
+      line-height: 40px;
+      font-size: 22px;
+   }
+}
+
+.translatedText {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 24px;
+   color: #a19cc5;
+   margin-top: 1rem;
+
+   @media only screen and (max-width: 505px) {
+      font-size: 16px;
+   }
+}
+
+.body {
+   padding: 2rem 10px;
+   border-bottom: 1px solid rgba(123, 128, 173, 0.35);
+}
+
+.active {
+   border-radius: 10px 10px 0px 0px;
+   background-color: rgba(0, 23, 88, 0.797);
+}
