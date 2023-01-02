@@ -22,7 +22,7 @@ const SurahList = () => {
    useEffect(() => {
       setIsLoading(true);
       axios
-         .get("http://api.alquran.cloud/v1/surah")
+         .get("https://api.alquran.cloud/v1/surah")
          .then((response) => response.data)
          .then(({ data }) => setSurahs(data))
          .finally(() => setIsLoading((prevVal) => !prevVal));
