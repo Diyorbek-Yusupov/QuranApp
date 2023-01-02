@@ -15,6 +15,7 @@ function App() {
                <Route index element={<SurahList />} />
                <Route path="/surahs/:id" element={<AyahList />} />
             </Route>
+            <Route path="*" element={<Home />} />
             <Route path="/prayTimes" element={<PrayTimes />} />
          </Route>
       </Routes>
