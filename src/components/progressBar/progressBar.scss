@@ -1,0 +1,77 @@
+.customProgressBar {
+   .card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .progressIndex {
+      color: #2ecc71;
+   }
+
+   .card .percent {
+      position: relative;
+   }
+
+   .card svg {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      transform: rotate(-90deg);
+   }
+
+   .card svg circle {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #a44affa1;
+      stroke-width: 10;
+      stroke-linecap: round;
+   }
+
+   .card svg circle:last-of-type {
+      stroke-dasharray: 625px;
+
+      stroke: #2ecc71;
+   }
+
+   .card .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+}
+
+.progressIndex {
+   span {
+      font-size: 16px;
+      display: block;
+      text-align: center;
+   }
+   .progressbarTitle {
+      font-size: 24px;
+   }
+
+   .progressbarBody {
+      font-size: 24px;
+      color: #fff;
+   }
+
+   .progressbarSubttle {
+      color: #a19cc5;
+   }
+
+   .progressbarTitle {
+      color: #edaa00;
+   }
+   .progressbarSubttle {
+      display: grid;
+      grid-template-columns: repeat(6, 15px);
+      place-items: center;
+      text-align: center;
+      gap: 0px;
+      justify-content: center;
+   }
+}

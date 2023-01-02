@@ -31,7 +31,9 @@ const Home = () => {
                <Link to="/surahs">
                   <button className={styles.btn}>{t("Koran")} </button>
                </Link>
-               <button className={styles.btn}>{t("prayTime")}</button>
+               <Link to="/prayTimes">
+                  <button className={styles.btn}>{t("prayTime")}</button>
+               </Link>
             </div>
             <Languages />
          </div>

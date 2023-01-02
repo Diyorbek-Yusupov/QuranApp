@@ -1,0 +1,43 @@
+.headWrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: start;
+   gap: 1rem;
+
+   @media only screen and (max-width: 1160px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media only screen and (max-width: 790px) {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+.metaDatas {
+   display: grid;
+   grid-template-columns: 30px 1fr;
+   align-items: flex-start;
+   gap: 10px;
+}
+
+.imgWrap {
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.city {
+   font-size: 34px;
+   @media only screen and (max-width: 475px) {
+      font-size: 28px;
+   }
+}
+
+.barWrapper {
+   display: flex;
+   justify-content: center;
+}
+
+.date {
+   font-size: 24px;
+}
