@@ -1,0 +1,57 @@
+.singleTime {
+   padding: 15px;
+   border: 1px solid #a44aff;
+   display: flex;
+   align-items: center;
+   border-radius: 10px;
+   gap: 2rem;
+
+   @media only screen and (max-width: 790px) {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   //    @media only screen and (max-width: 370px) {
+   //       flex-direction: row;
+   //       text-align: start;
+   //    }
+}
+
+.imgBox {
+   height: 100px;
+   width: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.15);
+   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+   backdrop-filter: blur(4px);
+   -webkit-backdrop-filter: blur(4px);
+   border-radius: 10px;
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   img {
+      width: 80%;
+   }
+
+   @media only screen and (max-width: 370px) {
+      height: 70px;
+      width: 70px;
+   }
+
+   // background-color: red;
+}
+
+.timeTitle {
+   font-size: 28px;
+   margin-bottom: 10px;
+
+   @media only screen and (max-width: 370px) {
+      font-size: 20px;
+      margin-bottom: 5px;
+   }
+}
+
+.timeValue {
+   font-size: 20px;
+   color: #a19cc5;
+}

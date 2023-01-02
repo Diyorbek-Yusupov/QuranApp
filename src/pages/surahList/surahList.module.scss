@@ -1,5 +1,7 @@
 .mainWrapper {
-   min-height: 100vh;
+   // min-height: 100vh;
+
+   min-height: calc(100vh - 47px);
 }
 
 .formGroup {

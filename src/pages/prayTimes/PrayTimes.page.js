@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Loader from "../../components/loader/Loader";
 import Navbar from "../../components/navbar/Navbar";
 import ProgressBar from "../../components/progressBar/ProgressBar";
+import SinglePrayTime from "../../components/singlePrayTime/SinglePrayTime";
 
 import styles from "./prayTimes.module.scss";
 
@@ -35,7 +36,6 @@ const PrayTimes = () => {
       let nearestTime = Number.MAX_SAFE_INTEGER;
       const now = Date.now();
       let founded = false;
-      console.log(data);
       for (const [key, value] of Object.entries(data.today)) {
          const hour = parseInt(value);
          const min = parseInt(value.slice(-2));
@@ -99,11 +99,9 @@ const PrayTimes = () => {
 
       // findUpcomingTime(prayTimes);
    }, [prayTimes]);
-   console.log(prayTimes);
-   console.log(upcomingTime);
    if (isLoading) return <Loader />;
    return (
-      <div>
+      <div className={styles.mainWrapper}>
          <Navbar />
          <div className="container">
             <div className={styles.headWrapper}>
@@ -120,9 +118,20 @@ const PrayTimes = () => {
                   </h4>
                </div>
                <div className={styles.barWrapper}>
-                  {console.log(prevTime)}
                   {prayTimes && <ProgressBar prayTimes={prayTimes} />}
                </div>
+            </div>
+            <div className={styles.timeWrapper}>
+               {Object.entries(prayTimes.today).map(
+                  ([timeName, timeValue], index) => (
+                     <SinglePrayTime
+                        key={index}
+                        timeName={t(`prayTimes.${timeNames.indexOf(timeName)}`)}
+                        timeValue={timeValue}
+                        imgUrl={timeNames[index]}
+                     />
+                  )
+               )}
             </div>
          </div>
       </div>

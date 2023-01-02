@@ -1,3 +1,7 @@
+.mainWrapper {
+   min-height: calc(100vh - 47px);
+}
+
 .headWrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -36,8 +40,32 @@
 .barWrapper {
    display: flex;
    justify-content: center;
+   min-height: 217px;
 }
 
 .date {
    font-size: 24px;
+}
+.timeWrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin-top: 3rem;
+   gap: 2rem;
+
+   @media only screen and (max-width: 1160px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media only screen and (max-width: 790px) {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   @media only screen and (max-width: 540px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media only screen and (max-width: 370px) {
+      // grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+   }
 }

@@ -82,7 +82,7 @@ const ProgressBar = ({ prayTimes }) => {
          upcomingTime.current = {
             nameIndex: 0,
             value: data.today.Fajr,
-            isTomorrow: false,
+            isTomorrow: true,
          };
          prevtime.current = data.today["Isha'a"];
       }
@@ -118,8 +118,11 @@ const ProgressBar = ({ prayTimes }) => {
                         {upcomingTime.current.value}
                      </span>
                      <span className="progressbarSubttle">
-                        - <span>{hour.current}</span> :
-                        <span>{min.current}</span>:<span>{sec.current}</span>
+                        - <span>{hour.current.toString().padStart(2, 0)}</span>
+                        <span> :</span>
+                        <span>{min.current.toString().padStart(2, 0)}</span>
+                        <span> :</span>
+                        <span>{sec.current.toString().padStart(2, 0)}</span>
                      </span>
                   </h3>
                </div>
