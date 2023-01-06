@@ -109,7 +109,7 @@ i18n
 
                locationSearchError: "Siz qidirgan shahar topilmadi",
                locationAccessError:
-                  "Shaharingizni avtomatik aniqlash uchun joylashuvga ruxsat bering",
+                  "Shahringizni avtomatik aniqlash uchun joylashuvga ruxsat bering",
                cityNameSearch: "Shahringizni kiriting",
             },
          },

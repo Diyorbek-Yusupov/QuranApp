@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ToastContainer, toast } from "react-toastify";
 import Loader from "../../components/loader/Loader";
 import Navbar from "../../components/navbar/Navbar";
 import ProgressBar from "../../components/progressBar/ProgressBar";
 import SinglePrayTime from "../../components/singlePrayTime/SinglePrayTime";
+import Skeleton from "../../components/skeleton/Skeleton";
 
-import "react-toastify/dist/ReactToastify.css";
 import styles from "./prayTimes.module.scss";
 import AlertBox from "../../components/alertBox/AlertBox";
 
@@ -20,7 +19,6 @@ const PrayTimes = () => {
 
    const { t } = useTranslation();
    const date = new Date();
-   const notify = () => toast("Wow so easy!", { autoClose: false });
    const coords = { lat: 0, lon: 0 };
    const timeNames = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha'a"];
    let locationAccessChangeRef = useRef(null);
@@ -150,13 +148,8 @@ const PrayTimes = () => {
                   <img src="/images/searchIcon.svg" alt="" />
                </button>
             </form>
-
-            <div>
-               <button onClick={notify}>Notify!</button>
-               <ToastContainer />
-            </div>
             {isLoading ? (
-               "Loading"
+               <Skeleton />
             ) : errorMsg ? (
                <AlertBox>{errorMsg.message}</AlertBox>
             ) : !prayTimes ? (
