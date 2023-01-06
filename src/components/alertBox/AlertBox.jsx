@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from "./alertBox.module.scss";
 
-const AlertBox = ({ children }) => {
+const AlertBox = ({ children, type }) => {
    const [isVisible, setIsVisible] = useState(true);
    if (!isVisible) return;
    return (
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles[type]}`}>
          <span
             onClick={() => {
                setIsVisible(false);

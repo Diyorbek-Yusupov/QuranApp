@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Loader from "../../components/loader/Loader";
 import Navbar from "../../components/navbar/Navbar";
 import ProgressBar from "../../components/progressBar/ProgressBar";
 import SinglePrayTime from "../../components/singlePrayTime/SinglePrayTime";
@@ -27,25 +26,20 @@ const PrayTimes = () => {
    document.title = t("prayTime");
 
    const lococationPermissonChangeEvent = () => {
-      console.log("setted");
-      navigator.permissions.query({ name: "geolocation" }).then(
-         (permissionStatus) => {
-            if (prayTimes) console.log(permissionStatus.state);
+      navigator.permissions
+         .query({ name: "geolocation" })
+         .then((permissionStatus) => {
             setLocationAcces(permissionStatus.state === "granted");
             permissionStatus.onchange = () => {
                setLocationAcces(permissionStatus.state === "granted");
-               console.log(permissionStatus.state);
                if (permissionStatus.state === "granted") {
-                  console.log("call 1");
                   getCurrPlaceTimes();
                }
             };
             locationAccessChangeRef.current = () => {
                permissionStatus.onchange = null;
             };
-         },
-         (error) => console.log(error)
-      );
+         });
    };
 
    const getPosition = () => {
@@ -70,12 +64,10 @@ const PrayTimes = () => {
       try {
          await getPosition();
       } catch (error) {
-         console.log(error);
          setIsloading(false);
          locationIsFound = false;
       }
       if (!locationIsFound && !cityName) return;
-      console.log(locationIsFound);
       setIsloading(true);
       let searchingCity;
 
@@ -103,14 +95,12 @@ const PrayTimes = () => {
          if (data.Error) throw new Error("Result Not Found");
          setPrayTimes(data);
       } catch (error) {
-         console.log(error);
          setErrorMsg({ message: error.message, type: "error" });
       }
       setIsloading(false);
    };
    useEffect(() => {
       if (!prayTimes) {
-         console.log("call 2");
          getCurrPlaceTimes();
          lococationPermissonChangeEvent();
       }
@@ -126,14 +116,12 @@ const PrayTimes = () => {
          <Navbar />
 
          <div className="container">
-            {console.log(locationAcces)}
             {!locationAcces ? (
-               <AlertBox>{t("locationAccessError")}!</AlertBox>
+               <AlertBox type={"warning"}>{t("locationAccessError")}!</AlertBox>
             ) : null}
             <form
                onSubmit={(e) => {
                   e.preventDefault();
-                  console.log("call 3");
                   getCurrPlaceTimes(searchInputVal.current);
                }}
                className={styles.cityForm}
@@ -151,7 +139,7 @@ const PrayTimes = () => {
             {isLoading ? (
                <Skeleton />
             ) : errorMsg ? (
-               <AlertBox>{errorMsg.message}</AlertBox>
+               <AlertBox type={"error"}>{errorMsg.message}</AlertBox>
             ) : !prayTimes ? (
                ""
             ) : (

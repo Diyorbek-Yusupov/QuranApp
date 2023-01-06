@@ -2,9 +2,6 @@
    padding: 15px;
    position: relative;
    width: 100%;
-   background-color: #635400;
-   color: #ffcf30;
-   border: 1px solid #d4ab26;
    border-radius: 3px;
 
    span {
@@ -13,4 +10,16 @@
       right: 5px;
       cursor: pointer;
    }
+}
+
+.warning {
+   background-color: #635400;
+   color: #ffcf30;
+   border: 1px solid #d4ab26;
+}
+
+.error {
+   background-color: #330000;
+   color: #ff8080;
+   border: 1px solid #7b0000;
 }
