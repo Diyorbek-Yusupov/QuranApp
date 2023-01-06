@@ -53,6 +53,10 @@ i18n
                   "December",
                ],
                prayTimes: ["Fajr", "Shuruk", "Dhuhr", "Asr", "Maghrib", "Isha"],
+               locationSearchError: "The city you searched for was not found",
+               locationAccessError:
+                  "Allow location to automatically detect your city",
+               cityNameSearch: "Enter your city's name",
             },
          },
          uz: {
@@ -102,6 +106,11 @@ i18n
                   "Shom",
                   "Xufton",
                ],
+
+               locationSearchError: "Siz qidirgan shahar topilmadi",
+               locationAccessError:
+                  "Shaharingizni avtomatik aniqlash uchun joylashuvga ruxsat bering",
+               cityNameSearch: "Shahringizni kiriting",
             },
          },
          ru: {
@@ -143,6 +152,10 @@ i18n
                   "Декабрь",
                ],
                prayTimes: ["Фаджр", "Восход", "Зухр", "Acp", "Магриб", "Иша"],
+               locationSearchError: "Город, который вы искали, не найден",
+               locationAccessError:
+                  "Разрешить местоположению автоматически определять ваш город",
+               cityNameSearch: "Введите вашего города",
             },
          },
       },

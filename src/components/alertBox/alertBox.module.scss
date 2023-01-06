@@ -1,0 +1,16 @@
+.container {
+   padding: 15px;
+   position: relative;
+   width: 100%;
+   background-color: #635400;
+   color: #ffcf30;
+   border: 1px solid #d4ab26;
+   border-radius: 3px;
+
+   span {
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      cursor: pointer;
+   }
+}

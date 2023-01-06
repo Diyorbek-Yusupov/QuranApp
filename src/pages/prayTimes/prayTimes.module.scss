@@ -69,3 +69,30 @@
       gap: 10px;
    }
 }
+
+.cityForm {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin: 1rem 0;
+   background-color: #fff;
+   border-radius: 35px;
+   overflow: hidden;
+}
+.cityFormInput {
+   width: 100%;
+   padding: 20px;
+   outline: none;
+   border: none;
+   font-size: 18px;
+}
+
+.cityFormBtn {
+   width: 70px;
+   cursor: pointer;
+   padding: 20px;
+   padding-right: 2 0px;
+   background-color: transparent;
+   border: none;
+   outline: none;
+}
