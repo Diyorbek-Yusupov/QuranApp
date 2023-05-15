@@ -7,6 +7,7 @@ import PrayTimes from "./pages/prayTimes/PrayTimes.page";
 import SurahList from "./pages/surahList/SurahList.page";
 
 function App() {
+   console.log("new version!");
    return (
       <Routes>
          <Route path="/" element={<PlayerLayout />}>
