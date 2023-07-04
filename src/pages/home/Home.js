@@ -8,9 +8,9 @@ const Home = () => {
    document.title = t("homePage.pageName");
    return (
       <div className={styles.home}>
-         // <h1 className={styles.title}>
-         //    Quran app <i>by Albison (Diyorbek)</i>
-         // </h1>
+          <h1 className={styles.title}>
+             Quran app
+          </h1>
          <p className={styles.subtitle}>{t("homePage.subtitle")}</p>
          <div className={styles.imgWrapper}>
             <img
